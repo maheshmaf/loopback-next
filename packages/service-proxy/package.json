@@ -25,12 +25,12 @@
   },
   "devDependencies": {
     "@loopback/build": "^6.1.0",
+    "@loopback/core": "^2.9.1",
     "@loopback/eslint-config": "^8.0.3",
     "@loopback/testlab": "^3.2.0",
     "@types/node": "^10.17.27"
   },
   "dependencies": {
-    "@loopback/core": "^2.9.1",
     "loopback-datasource-juggler": "^4.21.2",
     "tslib": "^2.0.0"
   },
@@ -44,5 +44,8 @@
     "type": "git",
     "url": "https://github.com/strongloop/loopback-next.git",
     "directory": "packages/service-proxy"
+  },
+  "peerDependencies": {
+    "@loopback/core": "^2.9.1"
   }
 }
