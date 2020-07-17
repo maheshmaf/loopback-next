@@ -71,6 +71,10 @@
     "src",
     "!*/__tests__"
   ],
+<% if (project.projectType === 'extension') { -%>
+  "peerDependencies": {
+    "@loopback/core": "<%= project.dependencies['@loopback/core'] -%>"
+  },
   "dependencies": {
 <% if (project.projectType === 'application') { -%>
     "@loopback/boot": "<%= project.dependencies['@loopback/boot'] -%>",
@@ -83,10 +87,6 @@
     "@loopback/rest-explorer": "<%= project.dependencies['@loopback/rest-explorer'] -%>",
 <% } -%>
     "tslib": "<%= project.dependencies['tslib'] -%>"
-  },
-<% if (project.projectType === 'extension') { -%>
-  "peerDependencies": {
-    "@loopback/core": "<%= project.dependencies['@loopback/core'] -%>"
   },
 <% } -%>
   "devDependencies": {

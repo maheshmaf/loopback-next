@@ -71,6 +71,11 @@
     "src",
     "!*/__tests__"
   ],
+<% if (project.projectType === 'extension') { -%>
+  "peerDependencies": {
+    "@loopback/core": "<%= project.dependencies['@loopback/core'] -%>"
+  },
+<% } -%>
   "dependencies": {
 <% if (project.projectType === 'application') { -%>
     "@loopback/boot": "<%= project.dependencies['@loopback/boot'] -%>",
@@ -91,11 +96,6 @@
 <% } -%>
     "tslib": "<%= project.dependencies['tslib'] -%>"
   },
-<% if (project.projectType === 'extension') { -%>
-  "peerDependencies": {
-    "@loopback/core": "<%= project.dependencies['@loopback/core'] -%>"
-  },
-<% } -%>
   "devDependencies": {
     "@loopback/build": "<%= project.dependencies['@loopback/build'] -%>",
     "source-map-support": "<%= project.dependencies['source-map-support'] -%>",
