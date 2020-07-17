@@ -23,6 +23,9 @@
   "publishConfig": {
     "access": "public"
   },
+  "peerDependencies": {
+    "@loopback/core": "^2.9.1"
+  },
   "dependencies": {
     "@loopback/security": "^0.2.14",
     "debug": "^4.1.1",
@@ -51,8 +54,5 @@
     "type": "git",
     "url": "https://github.com/strongloop/loopback-next.git",
     "directory": "packages/authorization"
-  },
-  "peerDependencies": {
-    "@loopback/core": "^2.9.1"
   }
 }

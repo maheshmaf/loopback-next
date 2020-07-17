@@ -20,6 +20,10 @@
   "publishConfig": {
     "access": "public"
   },
+  "peerDependencies": {
+    "@loopback/core": "^2.9.1",
+    "@loopback/repository": "^2.9.0"
+  },
   "devDependencies": {
     "@loopback/build": "^1.7.1",
     "@loopback/core": "^2.9.1",
@@ -34,10 +38,6 @@
     "@types/debug": "^4.1.5",
     "debug": "^4.1.1",
     "tslib": "^2.0.0"
-  },
-  "peerDependencies": {
-    "@loopback/core": "^2.9.1",
-    "@loopback/repository": "^2.9.0"
   },
   "files": [
     "README.md",

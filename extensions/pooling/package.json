@@ -31,6 +31,9 @@
     "src",
     "!*/__tests__"
   ],
+  "peerDependencies": {
+    "@loopback/core": "^2.9.1"
+  },
   "dependencies": {
     "@types/generic-pool": "^3.1.9",
     "generic-pool": "^3.7.1",
@@ -46,8 +49,5 @@
   "copyright.owner": "IBM Corp.",
   "publishConfig": {
     "access": "public"
-  },
-  "peerDependencies": {
-    "@loopback/core": "^2.9.1"
   }
 }

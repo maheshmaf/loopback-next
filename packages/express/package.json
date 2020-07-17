@@ -36,6 +36,9 @@
     "src",
     "!*/__tests__"
   ],
+  "peerDependencies": {
+    "@loopback/core": "^2.9.1"
+  },
   "dependencies": {
     "@loopback/http-server": "^2.1.9",
     "@types/body-parser": "^1.19.0",
@@ -59,8 +62,5 @@
     "http-errors": "^1.8.0",
     "source-map-support": "^0.5.19",
     "typescript": "~3.9.7"
-  },
-  "peerDependencies": {
-    "@loopback/core": "^2.9.1"
   }
 }

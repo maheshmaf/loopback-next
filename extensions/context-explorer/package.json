@@ -20,6 +20,10 @@
   "publishConfig": {
     "access": "public"
   },
+  "peerDependencies": {
+    "@loopback/core": "^2.9.1",
+    "@loopback/rest": "^5.2.0"
+  },
   "dependencies": {
     "ts-graphviz": "^0.13.1",
     "viz.js": "^2.1.2"
@@ -49,9 +53,5 @@
     "type": "git",
     "url": "https://github.com/strongloop/loopback-next.git",
     "directory": "extensions/context-explorer"
-  },
-  "peerDependencies": {
-    "@loopback/core": "^2.9.1",
-    "@loopback/rest": "^5.2.0"
   }
 }

@@ -38,6 +38,10 @@
     "url": "https://github.com/strongloop/loopback-next.git",
     "directory": "extensions/apiconnect"
   },
+  "peerDependencies": {
+    "@loopback/core": "^2.9.1",
+    "@loopback/rest": "^5.2.0"
+  },
   "dependencies": {
     "tslib": "^2.0.0"
   },
@@ -48,9 +52,5 @@
     "@loopback/rest": "^5.2.0",
     "@loopback/testlab": "^3.2.0",
     "@types/node": "^10.17.27"
-  },
-  "peerDependencies": {
-    "@loopback/core": "^2.9.1",
-    "@loopback/rest": "^5.2.0"
   }
 }

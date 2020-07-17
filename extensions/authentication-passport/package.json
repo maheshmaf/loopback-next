@@ -39,6 +39,11 @@
     "url": "https://github.com/strongloop/loopback-next.git",
     "directory": "extensions/authentication-passport"
   },
+  "peerDependencies": {
+    "@loopback/authentication": "^4.2.9",
+    "@loopback/core": "^2.9.1",
+    "@loopback/rest": "^5.2.0"
+  },
   "dependencies": {
     "@loopback/security": "^0.2.14",
     "passport": "^0.4.1",
@@ -71,10 +76,5 @@
     "passport-oauth2": "^1.5.0",
     "qs": "^6.9.4",
     "supertest": "^4.0.2"
-  },
-  "peerDependencies": {
-    "@loopback/authentication": "^4.2.9",
-    "@loopback/core": "^2.9.1",
-    "@loopback/rest": "^5.2.0"
   }
 }

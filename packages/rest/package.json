@@ -23,6 +23,9 @@
   "publishConfig": {
     "access": "public"
   },
+  "peerDependencies": {
+    "@loopback/core": "^2.9.1"
+  },
   "dependencies": {
     "@loopback/express": "^1.2.5",
     "@loopback/http-server": "^2.1.9",
@@ -82,8 +85,5 @@
     "type": "git",
     "url": "https://github.com/strongloop/loopback-next.git",
     "directory": "packages/rest"
-  },
-  "peerDependencies": {
-    "@loopback/core": "^2.9.1"
   }
 }

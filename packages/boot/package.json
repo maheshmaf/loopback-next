@@ -23,6 +23,11 @@
   "publishConfig": {
     "access": "public"
   },
+  "peerDependencies": {
+    "@loopback/core": "^2.9.1",
+    "@loopback/repository": "^2.9.0",
+    "@loopback/service-proxy": "^2.3.4"
+  },
   "dependencies": {
     "@loopback/model-api-builder": "^2.1.9",
     "@types/debug": "^4.1.5",
@@ -52,10 +57,5 @@
     "type": "git",
     "url": "https://github.com/strongloop/loopback-next.git",
     "directory": "packages/boot"
-  },
-  "peerDependencies": {
-    "@loopback/core": "^2.9.1",
-    "@loopback/repository": "^2.9.0",
-    "@loopback/service-proxy": "^2.3.4"
   }
 }

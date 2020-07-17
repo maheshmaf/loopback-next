@@ -20,6 +20,12 @@
   "publishConfig": {
     "access": "public"
   },
+  "peerDependencies": {
+    "@loopback/authentication": "^4.2.9",
+    "@loopback/core": "^2.9.1",
+    "@loopback/rest": "^5.2.0",
+    "@loopback/service-proxy": "^2.3.4"
+  },
   "dependencies": {
     "@loopback/rest-explorer": "^2.2.6",
     "@loopback/security": "^0.2.14",
@@ -57,11 +63,5 @@
     "type": "git",
     "url": "https://github.com/strongloop/loopback-next.git",
     "directory": "extensions/authentication-jwt"
-  },
-  "peerDependencies": {
-    "@loopback/authentication": "^4.2.9",
-    "@loopback/core": "^2.9.1",
-    "@loopback/rest": "^5.2.0",
-    "@loopback/service-proxy": "^2.3.4"
   }
 }
