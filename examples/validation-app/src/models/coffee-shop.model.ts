@@ -17,6 +17,7 @@ export class CoffeeShop extends Entity {
   @property({
     type: 'string',
     required: true,
+    // Add jsonSchema
     jsonSchema: {
       maxLength: 10,
       minLength: 5,
@@ -28,6 +29,7 @@ export class CoffeeShop extends Entity {
   @property({
     type: 'string',
     required: true,
+    // Add jsonSchema
     jsonSchema: {
       pattern: '\\d{3}-\\d{3}-\\d{4}',
       errorMessage: 'Invalid phone number',
@@ -38,6 +40,7 @@ export class CoffeeShop extends Entity {
   @property({
     type: 'number',
     required: true,
+    // Add jsonSchema
     jsonSchema: {
       maximum: 100,
       minimum: 1,
@@ -51,6 +54,7 @@ export class CoffeeShop extends Entity {
 
   @property({
     type: 'number',
+    // Add jsonSchema
     jsonSchema: {
       range: [1, 5],
       errorMessage: 'Rating should be between 1 and 5',

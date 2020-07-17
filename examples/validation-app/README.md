@@ -19,20 +19,25 @@ instance with the in-memory storage.
    @property({
     type: 'string',
     required: true,
+    // Add jsonSchema
     jsonSchema: {
       maxLength: 10,
-      minLength: 1,
+      minLength: 5,
+      errorMessage: 'City name should be between 5 and 10 characters',
     },
    })
    city: string;
    ```
 
 2. [ValidatePhoneNumInterceptor](src/interceptors/validate-phone-num.interceptor.ts):
-   interceptor that checks whether the area code of the phone number matches
-   with the city name
+   an interceptor for custom validation - it checks whether the area code of the
+   phone number matches with the city name.
 
 3. [CoffeeShopController](src/controllers/coffee-shop.controller.ts): controller
    where the `ValidatePhoneNumInterceptor` is applied.
+
+4. [MySequence](src/sequence.ts): a custom sequence for creating custom error
+   messages.
 
 ## Use
 
@@ -60,7 +65,7 @@ is happening. An example of valid request body for `CoffeeShop` is:
 ```
 
 However, the following examples of request body are not valid, and you'll be
-getting an error with status code 422.
+getting an error with status code 422 and their corresponding error messages.
 
 ### Example 1: CoffeeShop.city length exceeds limit of 10
 

@@ -923,29 +923,6 @@ If the `jsonSchema` field is missing, you will get an error saying
 You can also specify the validation rules in the `jsonSchema` field of the
 property option and configure them with custom error messages.
 
-For this to work, you should first create a `RequestBodyValidationOptions`
-object and bind it to `RestBindings.REQUEST_BODY_PARSER_OPTIONS` as shown in the
-example below.
-
-```ts
-import {RestApplication, RestBindings, RequestBodyValidationOptions} from '@loopback/rest';
-...
-export class MApplication extends BootMixin(
-  ServiceMixin(RepositoryMixin(RestApplication)),
-) {
-  constructor(options: ApplicationConfig = {}) {
-    super(options);
-
-    const validationOptions: RequestBodyValidationOptions = {
-      $data: true,
-      ajvKeywords: true,
-      ajvErrors: true
-    };
-
-    this.bind(RestBindings.REQUEST_BODY_PARSER_OPTIONS).to({validation: validationOptions});
-    ...
-```
-
 The validation rules and custom error messages are configured this way.
 
 ```ts
@@ -959,20 +936,27 @@ class Product extends Entity {
     jsonSchema: {
       minLength: 10,
       maxLength: 30,
-      errorMessage: {
-        // Corresponding error messages
-        minLength: 'name should be at least 10 characters',
-        maxLength: 'name should not exceed 30 characters',
-      },
+      errorMessage: 'Name should be between 10 and 30 characters.',
     },
   })
   public name: string;
 }
 ```
 
-Note: You can also specify a string instead of an object as a value for
-`errorMessage`. In this case the same string will be used as the error message
-for all the errors.
+In case you want to send an error message specific to the validation rule that
+did not pass, you can configure `errorMessage` this way.
+
+```ts
+jsonSchema: {
+  minLength: 10,
+  maxLength: 30,
+  errorMessage: {
+    // Corresponding error messages
+    minLength: 'Name should be at least 10 characters.',
+    maxLength: 'Name should not exceed 30 characters.',
+  }
+}
+```
 
 Check out the documentation of
 [Parsing requests](Parsing-requests.md#request-body) to see how to do it in
