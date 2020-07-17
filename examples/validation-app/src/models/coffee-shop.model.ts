@@ -43,7 +43,7 @@ export class CoffeeShop extends Entity {
     // Add jsonSchema
     jsonSchema: {
       maximum: 100,
-      minimum: 1,
+      minimum: 10,
       errorMessage: {
         maximum: 'Capacity cannot exceed 100',
         minimum: 'Capacity cannot be less than 1',

@@ -74,7 +74,7 @@ describe('validate properties', () => {
     const invalidCapacityTypeCS = {
       city: '',
       phoneNum: '',
-      capacity: '',
+      capacity: 0,
       rating: '',
     };
     const response = await client
@@ -85,7 +85,15 @@ describe('validate properties', () => {
     expect(response.body.error.message).to.equal(
       'The request body is invalid. See error object `details` property for more info.',
     );
-    expect(response.body.error.details.length).to.equal(4);
+    expect(
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      response.body.error.details.map((d: any) => d.message),
+    ).to.deepEqual([
+      'City name should be between 5 and 10 characters',
+      'Invalid phone number',
+      'Capacity cannot be less than 1',
+      'Rating should be between 1 and 5',
+    ]);
   });
 
   it('should apply controller-level custom validations', async () => {
